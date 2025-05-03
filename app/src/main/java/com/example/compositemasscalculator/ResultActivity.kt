@@ -200,18 +200,18 @@ class ResultActivity : AppCompatActivity() {
         currentCalculation?.let { calculation ->
             lifecycleScope.launch(Dispatchers.IO) {
                 try {
-                    val pdfFile = pdfGenerator.generateReport(calculation)
+                    val pdfFile = pdfGenerator.generateProfessionalReport(calculation)
                     withContext(Dispatchers.Main) {
                         if (pdfFile != null) {
                             Toast.makeText(
                                 this@ResultActivity,
-                                "PDF сохранен в: ${pdfFile.absolutePath}",
+                                "PDF сохранен: ${pdfFile.absolutePath}",
                                 Toast.LENGTH_LONG
                             ).show()
                         } else {
                             Toast.makeText(
                                 this@ResultActivity,
-                                "Не удалось создать PDF",
+                                "Ошибка при создании PDF",
                                 Toast.LENGTH_LONG
                             ).show()
                         }
@@ -220,7 +220,7 @@ class ResultActivity : AppCompatActivity() {
                     withContext(Dispatchers.Main) {
                         Toast.makeText(
                             this@ResultActivity,
-                            "Ошибка экспорта: ${e.localizedMessage}",
+                            "Ошибка: ${e.localizedMessage}",
                             Toast.LENGTH_LONG
                         ).show()
                     }
