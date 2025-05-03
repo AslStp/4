@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Выберите армирующий материал"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <Spinner
+            android:id="@+id/spinner_material"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Площадь -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Площадь (м²)"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/et_area"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Количество слоев -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Количество слоев"
+            android:textSize="16sp"
+            android:layout_marginBottom="8dp"/>
+
+        <EditText
+            android:id="@+id/et_layers"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:inputType="number"
+            android:layout_marginBottom="24dp"/>
+
+        <EditText
+            android:id="@+id/et_item_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Введите название детали"
+            android:inputType="textCapWords"
+            android:importantForAutofill="no"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Контейнер для компонента B (будет показываться только для полуфабриката) -->
+        <LinearLayout
+            android:id="@+id/component_b_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Соотношение компонента B (A:B = 100:X)"
+                android:textSize="16sp"/>
+
+            <EditText
+                android:id="@+id/et_component_b"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:hint="Введите X (например, 32)"
+                android:inputType="numberDecimal"/>
+        </LinearLayout>
+
+        <!-- Кнопки -->
+        <Button
+            android:id="@+id/btn_add_layer"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Добавить слои"
+            android:backgroundTint="@color/purple_500"
+            android:textColor="@color/white"/>
+
+        <Button
+            android:id="@+id/btn_calculate"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="Рассчитать"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/purple_700"
+            android:textColor="@color/white"
+            android:enabled="false"
+            android:alpha="0.5"/>
+    </LinearLayout>
+</ScrollView>

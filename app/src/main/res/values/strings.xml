@@ -1,0 +1,29 @@
+<resources>
+    <!-- MainActivity -->
+    <string name="app_name">PCMass Calculator</string>
+    <string name="semi_product_button">Полуфабрикат</string>
+    <string name="final_product_button">Изделие</string>
+
+    <!-- InputActivity -->
+    <string name="material_hint">Выберите материал</string>
+    <string name="area_hint">Площадь слоя (м²)</string>
+    <string name="layers_hint">Количество слоев</string>
+    <string name="add_layer_button">Добавить слои</string>
+    <string name="calculate_button">Рассчитать</string>
+    <string name="layer_added">Слой добавлен!</string>
+    <string name="input_error">Ошибка ввода!</string>
+    <string name="empty_layers_error">Добавьте слои!</string>
+
+    <!-- ResultActivity -->
+    <string name="mam_result">Масса армирующего материала: %s г</string>
+    <string name="mc_result">Масса связующего: %s г</string>
+    <string name="total_result">Общая масса: %s г</string>
+    <string name="back_button">Назад</string>
+
+    <!-- Материалы для Spinner -->
+    <string-array name="materials_array">
+        <item>Углеткань ITECMA 22502 (200 г/м²)</item>
+        <item>Лента углеродная ACM C200P (200 г/м²)</item>
+        <item>Стеклоткань T-10-14 (290 г/м²)</item>
+    </string-array>
+</resources>

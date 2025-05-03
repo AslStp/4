@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <Button
+        android:id="@+id/btn_semi"
+        android:layout_width="231dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/purple_500"
+        android:padding="16dp"
+        android:text="Полуфабрикат"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_product"
+        android:layout_width="234dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/purple_700"
+        android:padding="16dp"
+        android:text="Изделие"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/btn_history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="История расчетов"
+        android:layout_margin="16dp"
+        android:backgroundTint="@color/teal_700"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:padding="16dp"/>
+
+    <Button
+        android:id="@+id/btn_add_material"
+        android:layout_width="241dp"
+        android:layout_height="63dp"
+        android:layout_marginTop="16dp"
+        android:text="Добавить материал" />
+
+
+
+
+</LinearLayout>
